@@ -1,0 +1,116 @@
+header{
+    background-image: url('head.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+    height:40vh;
+}
+header h1{
+    border-radius: 5px;
+}
+.kamar {
+    display: grid;
+    gap: 10px; /* Jarak antar elemen */
+    justify-content: center;
+}
+
+.child {
+    height:max-content;
+}
+.h3child{
+    border-radius: 5px;
+    width: max-content;
+    
+}
+.remaining{
+    width:100%;
+    padding:50px;
+
+}
+
+.remainingchild{
+    width:400px;
+    min-width: 25%;
+    height: max-content;
+    margin:30px;
+}
+.remainingchild p{
+    border-radius: 5px;
+}
+.remainingchild img{
+    width:100%;
+}
+form button{
+    width:40%;
+}
+.remainingchild input{
+    margin-top: 5px !important;
+    width:50%;
+}
+/* Responsif untuk jumlah kolom */
+@media screen and (min-width: 768px) {
+
+    .kamar {
+        padding:50px !important;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ganti nilai lebar yang diinginkan */
+        grid-gap:100px;
+    }
+}
+#child button{
+    width:100%;
+}
+@media screen and (max-width: 767px) {
+    header{
+        height:30vh;
+    }
+    header h1{
+        font-size: 80%;
+        padding:20px !important;
+    }
+    .kamar {
+        padding:10px !important;
+        grid-template-columns: repeat(auto-fit, minmax(75px, 1fr)); /* Ganti nilai lebar yang diinginkan */
+    }
+    #child{
+        padding:10px !important; 
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .child h1{
+        font-size: 80%;
+    }
+    .child div h3{
+        font-size: 90%;
+    }
+    .child div select, .child div button{
+        font-size: 70%;
+    }
+    #remaining{
+        flex-direction: column !important;
+        padding:30px !important;
+    }
+    .remainingchild{
+        width:100% !important;
+        padding:5px !important;
+        margin:0 !important;
+        margin-bottom:5px !important;
+        
+    }
+    .remainingchild img{
+        width:100% !important;
+    }
+    .remainingchild label h3 , .remainingchild input{
+        font-size: 80%;
+    }
+    .remainingchild input{
+        margin-top: 5px !important;
+    }
+    .remaining form div{
+        flex-direction: column !important;
+    }
+    form button{
+        width:80%;
+        font-size: 50%;
+    }
+}
